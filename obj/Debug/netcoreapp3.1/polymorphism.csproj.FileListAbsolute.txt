@@ -1,0 +1,13 @@
+E:\Demo-build\CSharp\Basics\Events-Delegate\polymorphism\bin\Debug\netcoreapp3.1\polymorphism.exe
+E:\Demo-build\CSharp\Basics\Events-Delegate\polymorphism\bin\Debug\netcoreapp3.1\polymorphism.deps.json
+E:\Demo-build\CSharp\Basics\Events-Delegate\polymorphism\bin\Debug\netcoreapp3.1\polymorphism.runtimeconfig.json
+E:\Demo-build\CSharp\Basics\Events-Delegate\polymorphism\bin\Debug\netcoreapp3.1\polymorphism.runtimeconfig.dev.json
+E:\Demo-build\CSharp\Basics\Events-Delegate\polymorphism\bin\Debug\netcoreapp3.1\polymorphism.dll
+E:\Demo-build\CSharp\Basics\Events-Delegate\polymorphism\bin\Debug\netcoreapp3.1\polymorphism.pdb
+E:\Demo-build\CSharp\Basics\Events-Delegate\polymorphism\obj\Debug\netcoreapp3.1\polymorphism.csprojAssemblyReference.cache
+E:\Demo-build\CSharp\Basics\Events-Delegate\polymorphism\obj\Debug\netcoreapp3.1\polymorphism.AssemblyInfoInputs.cache
+E:\Demo-build\CSharp\Basics\Events-Delegate\polymorphism\obj\Debug\netcoreapp3.1\polymorphism.AssemblyInfo.cs
+E:\Demo-build\CSharp\Basics\Events-Delegate\polymorphism\obj\Debug\netcoreapp3.1\polymorphism.csproj.CoreCompileInputs.cache
+E:\Demo-build\CSharp\Basics\Events-Delegate\polymorphism\obj\Debug\netcoreapp3.1\polymorphism.dll
+E:\Demo-build\CSharp\Basics\Events-Delegate\polymorphism\obj\Debug\netcoreapp3.1\polymorphism.pdb
+E:\Demo-build\CSharp\Basics\Events-Delegate\polymorphism\obj\Debug\netcoreapp3.1\polymorphism.genruntimeconfig.cache
