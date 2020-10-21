@@ -15,11 +15,11 @@ namespace polymorphism
     }
     class B : A
     {
-        public void Method1()
+        public new void Method1()
         {
             System.Console.WriteLine("B class Method 1 called");
         }
-        public void Method2()
+        public new void Method2()
         {
             System.Console.WriteLine("B class Method 2 called");
         }
@@ -44,6 +44,10 @@ namespace polymorphism
             /*This will work as the base can hold the reference of child class*/
             /* When virtual and override is removed from parent and child class 
                 below code called the parent class methods
+            */
+
+            /* new keyword is added in child class method to remove the warning
+                it's still called the parent class methods
             */
             A bObj = new B();
             bObj.Method1();
