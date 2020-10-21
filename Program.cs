@@ -49,7 +49,8 @@ namespace polymorphism
             /* new keyword is added in child class method to remove the warning
                 it's still called the parent class methods
             */
-            A bObj = new B();
+            /* Reference is set to B again, it called B method*/
+            B bObj = new B();
             bObj.Method1();
             bObj.Method2();
 
