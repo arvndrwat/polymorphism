@@ -1,59 +1,39 @@
-﻿using System;
+using System;
+using Examples.Polymorphism;
+using Examples.Inheritance;
+using Examples.Encapsulation;
+using Examples.Abstraction;
+using Examples.CompositionVsInheritance;
+using SOLID.SRP;
+using SOLID.OCP;
+using SOLID.LSP;
+using SOLID.ISP;
+using SOLID.DIP;
 
-namespace polymorphism
+class Program
 {
-    class A
+    static void Main(string[] args)
     {
-        public void Method1()
-        {
-            System.Console.WriteLine("A class Method 1 called");
-        }
-        public void Method2()
-        {
-            System.Console.WriteLine("A class Method 2 called");
-        }
-    }
-    class B : A
-    {
-        public new void Method1()
-        {
-            System.Console.WriteLine("B class Method 1 called");
-        }
-        public new void Method2()
-        {
-            System.Console.WriteLine("B class Method 2 called");
-        }
-    }
-    class Program
-    {
-        static void Main(string[] args)
-        {
-            // Calling the A class Methods 
+        Console.WriteLine("=== Polymorphism ==="); Examples.Polymorphism.PolymorphismExample.Run();
+        Console.WriteLine();
 
-            /* A aObj can be read as 
-            <datatype> <variable_name> = value
-            int i = 10;
-            The A() will be store in aObj as per above example
-            */
-            A aObj = new A();
-            aObj.Method1();
-            aObj.Method2();
+        Console.WriteLine("=== Inheritance ==="); Examples.Inheritance.InheritanceExample.Run();
+        Console.WriteLine();
 
-            System.Console.WriteLine("------------------------------");
+        Console.WriteLine("=== Encapsulation ==="); Examples.Encapsulation.EncapsulationExample.Run();
+        Console.WriteLine();
 
-            /*This will work as the base can hold the reference of child class*/
-            /* When virtual and override is removed from parent and child class 
-                below code called the parent class methods
-            */
+        Console.WriteLine("=== Abstraction ==="); Examples.Abstraction.AbstractionExample.Run();
+        Console.WriteLine();
 
-            /* new keyword is added in child class method to remove the warning
-                it's still called the parent class methods
-            */
-            /* Reference is set to B again, it called B method*/
-            B bObj = new B();
-            bObj.Method1();
-            bObj.Method2();
+        Console.WriteLine("=== Composition (preferred over improper inheritance) ==="); Examples.CompositionVsInheritance.CompositionExample.Run();
+        Console.WriteLine();
 
-        }
+        Console.WriteLine("=== SOLID Examples ===");
+        SOLID.SRP.SrpDemo.Run();
+        SOLID.OCP.OcpDemo.Run();
+        SOLID.LSP.LspDemo.Run();
+        SOLID.ISP.IspDemo.Run();
+        SOLID.DIP.DipDemo.Run();
     }
 }

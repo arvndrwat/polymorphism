@@ -4,26 +4,29 @@ This repository contains simple, real-world C# examples demonstrating core OOP c
 
 Structure
 - README.md — this file
-- Program.cs — original polymorphism demo (left as-is)
+- Program.cs — runner that demonstrates each example
 - Examples/
   - Polymorphism/PolymorphismExample.cs
   - Inheritance/InheritanceExample.cs
   - Encapsulation/EncapsulationExample.cs
   - Abstraction/AbstractionExample.cs
+  - CompositionVsInheritance/CompositionExample.cs
 - SOLID/
-  - SOLIDExamples.cs
+  - SRP/OrderAndPrinter.cs
+  - OCP/DiscountStrategy.cs
+  - LSP/BirdExample.cs
+  - ISP/DeviceExample.cs
+  - DIP/NotificationSenderExample.cs
 
 How to use
-- These example files contain classes and static Run() methods. To run any example:
-  1. Create a new Console project: `dotnet new console -n OopExamples`
-  2. Copy one example file into the project (Examples/... or SOLID/...).
-  3. In `Program.cs` call the example's Run() method (e.g., `PolymorphismExample.Run();`).
-  4. `dotnet run`
+1. dotnet new console -n OopExamples (if creating a fresh project)
+2. Copy the Examples/ and SOLID/ folders into the project
+3. Replace Program.cs with the included Program.cs or call specific Run() methods
+4. dotnet run
 
-Guidelines
-- Each example includes a short real-world analogy and step-by-step explanation.
-- Examples are intentionally small and focused so they can be used in interviews or teaching.
+Interview guidance
+- Each example contains a real-life analogy and a few follow-up questions you can ask in interviews.
+- Common pitfalls are documented (e.g., Rectangle/Square LSP example).
 
 Contributions
-- Add more scenarios with comments and small tests.
-- Add unit tests or a sample console runner combining all examples.
+- Add more scenarios, unit tests, and DI examples.

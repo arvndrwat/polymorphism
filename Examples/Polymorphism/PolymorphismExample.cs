@@ -1,18 +1,11 @@
 using System;
 
-// Real-life analogy:
-// Think of different types of notifications: Email, SMS, and Push.
-// All notifications can be "Sent", but each type sends differently.
-// This demonstrates runtime polymorphism via interfaces and virtual methods.
-
 namespace Examples.Polymorphism
 {
     public abstract class Notification
     {
         public string To { get; set; }
         public string Message { get; set; }
-
-        // Base behavior: all notifications can Send
         public abstract void Send();
     }
 
@@ -21,7 +14,7 @@ namespace Examples.Polymorphism
         public string Subject { get; set; }
         public override void Send()
         {
-            Console.WriteLine($"Sending EMAIL to {To}: Subject='{Subject}' Message='{Message}'");
+            Console.WriteLine($"[EMAIL] To:{To} Subject:'{Subject}' Message:'{Message}'");
         }
     }
 
@@ -29,7 +22,7 @@ namespace Examples.Polymorphism
     {
         public override void Send()
         {
-            Console.WriteLine($"Sending SMS to {To}: Message='{Message}'");
+            Console.WriteLine($"[SMS] To:{To} Message:'{Message}'");
         }
     }
 
@@ -37,29 +30,23 @@ namespace Examples.Polymorphism
     {
         public override void Send()
         {
-            Console.WriteLine($"Sending PUSH to {To}: Message='{Message}'");
+            Console.WriteLine($"[PUSH] To:{To} Message:'{Message}'");
         }
     }
 
     public static class PolymorphismExample
     {
-        // Steps to show polymorphism:
-        // 1. Create a list/array of base type Notification
-        // 2. Fill with different derived types
-        // 3. Call Send() on each — runtime type decides which implementation runs
         public static void Run()
         {
-            Notification[] notifications = new Notification[]
+            Notification[] items = new Notification[]
             {
-                new EmailNotification{ To = "alice@example.com", Subject = "Hi", Message = "Welcome" },
-                new SmsNotification{ To = "+15551234", Message = "Your code is 1234" },
-                new PushNotification{ To = "device-abc", Message = "You have a meeting" }
+                new EmailNotification{ To="alice@example.com", Subject="Welcome", Message="Hello Alice" },
+                new SmsNotification{ To="+15551234", Message="Your OTP is 1234" },
+                new PushNotification{ To="device-1", Message="You have a new message" }
             };
 
-            foreach (var n in notifications)
-            {
+            foreach (var n in items)
                 n.Send();
-            }
         }
     }
 }
